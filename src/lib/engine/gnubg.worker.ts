@@ -89,6 +89,7 @@ async function initEngine() {
     resolveReady = resolve
   })
 
+  // @ts-expect-error Module will be populated by gnubg.js
   Module = {
     locateFile: (path: string) => `/gnubg/${path}`,
     print: (line: string) => collectLog(line),

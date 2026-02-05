@@ -58,10 +58,10 @@ export function setZoneClear(board: BoardState, zone: "bar" | "borneOff") {
   return next
 }
 
-export function toggleOrientation(board: BoardState) {
+export function toggleOrientation(board: BoardState): BoardState {
   return {
     ...board,
-    orientation: board.orientation === "whiteBottom" ? "blackBottom" : "whiteBottom",
+    orientation: board.orientation === "whiteBottom" ? "blackBottom" as const : "whiteBottom" as const,
   }
 }
 
