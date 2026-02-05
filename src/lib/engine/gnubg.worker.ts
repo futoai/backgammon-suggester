@@ -12,7 +12,7 @@ type GnuBgModule = {
   onRuntimeInitialized?: () => void
 }
 
-var Module = {} as GnuBgModule
+let Module = {} as GnuBgModule
 let commandBufferInitialized = false
 let commandBuffer = 0
 
